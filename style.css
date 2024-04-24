@@ -17,9 +17,17 @@ html {
   
   h1 {
     text-align: center;
-    font-size: 10rem;
+    font-size: 8rem;
     line-height: 1;
     margin-bottom: 0;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 30px;
   }
   
   .score {
@@ -73,7 +81,7 @@ html {
     display: block;
     margin: 0 auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 70px;
     
   }
   .btn{

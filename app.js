@@ -1,10 +1,11 @@
-const holes = document.querySelectorAll('.hole');
+        const holes = document.querySelectorAll('.hole');
         const scoreBoard = document.querySelector('.score');
+        const highScore = document.querySelector('.highscore');
         const moles = document.querySelectorAll('.mole');
         let lastHole;
         let timeUp = false;
         let score= 0;
-
+        let highScoreVal = 0;
 
         function randomTime(max, min){
             return Math.floor(Math.random() * (max-min) + min);
@@ -50,6 +51,12 @@ const holes = document.querySelectorAll('.hole');
             score++;
             this.parentNode.classList.remove('up');
             scoreBoard.textContent = score;
+
+            if(score > highScoreVal){   // setting hign score
+                highScoreVal = score;
+                highScore.textContent = highScoreVal
+            }
+                
         }
 
         moles.forEach(mole => mole.addEventListener('click', bonk));
