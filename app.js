@@ -45,16 +45,18 @@
                 timeUp = true;
             }, 10000);
         }
+        highScore.textContent = localStorage.getItem('score')
 
         function bonk(e){
             if(!e.isTrusted) return; // cheater!
             score++;
             this.parentNode.classList.remove('up');
             scoreBoard.textContent = score;
-
+            
             if(score > highScoreVal){   // setting hign score
                 highScoreVal = score;
-                highScore.textContent = highScoreVal
+                localStorage.setItem('score', highScoreVal);
+                highScore.textContent = localStorage.getItem('score')
             }
                 
         }
